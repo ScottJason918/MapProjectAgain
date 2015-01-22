@@ -16,10 +16,18 @@ class DetailView: UIViewController {
     @IBOutlet weak var mapTitleLabel: UILabel!
     @IBOutlet weak var theMap: MKMapView!
     
+    /// instead of replicating the variables in your business object, just send the whole business object
+    //////// var business:TableInfo!
+    /// make sure to add "!" so you don't have to declare it up here, meaning it's technically optional
+    // then just pass this single variable from your segue. There is less opportunity for mistakes.
+    // you'll use dot notation "business.busName" to reference it (similar to the array) instead  of these varaibles.
+
     var busName : String = "";
     var busLoc : CLLocationCoordinate2D!;
     var busSub : String = "";
-    var myArray = [];
+    var myArray = []; //this array needs to be declared as an array of your object
+    // var myArray:[TableInfo] = []
+    //that way your be sure all the information is passed through, I think this is your problem
     
     let locationManager : CLLocationManager = CLLocationManager();
     
@@ -43,6 +51,9 @@ class DetailView: UIViewController {
     }
     
     ///Setting Annotations
+    // I would recommend  makint two separate view contoller files instead of having them in one.
+    // it makes it easier and keeps your code separate.
+    
     override func viewWillAppear(animated: Bool) {
         if myArray.count == 0{
             
@@ -56,7 +67,7 @@ class DetailView: UIViewController {
             mapTitleLabel.text = "All Bussinesses";
             for var i = 0; i > myArray.count; ++i{
                 var pin : MKPointAnnotation = MKPointAnnotation();
-               // pin.coordinate = myArray[i].busLoc;
+               // pin.coordinate = myArray[i].busLoc; //i tlooks like this was commented out? that might be the problem. lol
                 pin.title = myArray[i].busName;
                 pin.subtitle = myArray[i].busSub;
                 
