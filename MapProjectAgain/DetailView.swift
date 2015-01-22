@@ -16,10 +16,8 @@ class DetailView: UIViewController {
     @IBOutlet weak var mapTitleLabel: UILabel!
     @IBOutlet weak var theMap: MKMapView!
     
-    var busName : String = "";
-    var busLoc : CLLocationCoordinate2D!;
-    var busSub : String = "";
-    var myArray = [];
+    var business:TableInfo!
+    var myArray : [TableInfo] = [];
     
     let locationManager : CLLocationManager = CLLocationManager();
     
@@ -28,9 +26,9 @@ class DetailView: UIViewController {
         super.viewDidLoad()
         if myArray.count == 0{
             
-            mapTitleLabel.text = busName;
+            mapTitleLabel.text = business.busName;
             let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1);
-            let region = MKCoordinateRegionMake(busLoc, span);
+            let region = MKCoordinateRegionMake(business.busLoc, span);
             
             locationManager.requestWhenInUseAuthorization();
             theMap.region = region;
@@ -38,7 +36,7 @@ class DetailView: UIViewController {
             
             // Do any additional setup after loading the view.
         }else{
-            println(myArray);
+            println(business.busLoc);
         }
     }
     
@@ -47,18 +45,19 @@ class DetailView: UIViewController {
         if myArray.count == 0{
             
             var pin : MKPointAnnotation = MKPointAnnotation();
-            pin.coordinate = busLoc;
-            pin.title = busName;
-            pin.subtitle = busSub;
+            pin.coordinate = business.busLoc;
+            pin.title = business.busName;
+            pin.subtitle = business.busSub;
             
             theMap.addAnnotation(pin);
         }else{
             mapTitleLabel.text = "All Bussinesses";
-            for var i = 0; i > myArray.count; ++i{
+            for var i = 0; i < myArray.count; ++i{
                 var pin : MKPointAnnotation = MKPointAnnotation();
-               // pin.coordinate = myArray[i].busLoc;
-                pin.title = myArray[i].busName;
-                pin.subtitle = myArray[i].busSub;
+                
+                pin.coordinate = business.busLoc;
+                pin.title = business.busName;
+                pin.subtitle = business.busSub;
                 
                 theMap.addAnnotation(pin);
             }

@@ -116,15 +116,10 @@ class ViewController: UIViewController, UITableViewDataSource {
             var indexPath : NSIndexPath? = myTable.indexPathForSelectedRow();
             
             let currentSelection : TableInfo = myArray[indexPath!.row];
-            
-            println(currentSelection.busName);
-            detailView.busName = currentSelection.busName;
-            detailView.busLoc = currentSelection.busLoc;
-            detailView.busSub = currentSelection.busSub;
+            detailView.business = currentSelection;
         }
         if segue.identifier == "buttonSegue"{
             var detailView : DetailView = segue.destinationViewController as DetailView;
-            println(myArray[0].busLoc);
             detailView.myArray = myArray;
         }
     }
