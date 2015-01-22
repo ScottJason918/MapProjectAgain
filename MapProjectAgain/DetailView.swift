@@ -36,11 +36,10 @@ class DetailView: UIViewController {
             
             // Do any additional setup after loading the view.
         }else{
-            println(business.busLoc);
+        
         }
     }
-    
-    ///Setting Annotations
+
     override func viewWillAppear(animated: Bool) {
         if myArray.count == 0{
             
@@ -54,11 +53,10 @@ class DetailView: UIViewController {
             mapTitleLabel.text = "All Bussinesses";
             for var i = 0; i < myArray.count; ++i{
                 var pin : MKPointAnnotation = MKPointAnnotation();
-                
+
                 pin.coordinate = business.busLoc;
                 pin.title = business.busName;
                 pin.subtitle = business.busSub;
-                
                 theMap.addAnnotation(pin);
             }
         }
