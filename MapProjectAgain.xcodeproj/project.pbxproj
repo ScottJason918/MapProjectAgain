@@ -13,6 +13,10 @@
 		33C0E2BD1A6FDBE100287EAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33C0E2BC1A6FDBE100287EAD /* Images.xcassets */; };
 		33C0E2C01A6FDBE100287EAD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C0E2BE1A6FDBE100287EAD /* LaunchScreen.xib */; };
 		33C0E2CC1A6FDBE100287EAD /* MapProjectAgainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E2CB1A6FDBE100287EAD /* MapProjectAgainTests.swift */; };
+		33C0E2D61A6FDD1C00287EAD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C0E2D51A6FDD1C00287EAD /* MapKit.framework */; };
+		33C0E2D81A6FDD8400287EAD /* theCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E2D71A6FDD8400287EAD /* theCell.swift */; };
+		33C0E2DC1A6FDDA900287EAD /* infoForTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E2DB1A6FDDA900287EAD /* infoForTable.swift */; };
+		33C0E2DE1A6FDE9B00287EAD /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0E2DD1A6FDE9B00287EAD /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		33C0E2C51A6FDBE100287EAD /* MapProjectAgainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MapProjectAgainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C0E2CA1A6FDBE100287EAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33C0E2CB1A6FDBE100287EAD /* MapProjectAgainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapProjectAgainTests.swift; sourceTree = "<group>"; };
+		33C0E2D51A6FDD1C00287EAD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		33C0E2D71A6FDD8400287EAD /* theCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = theCell.swift; sourceTree = "<group>"; };
+		33C0E2DB1A6FDDA900287EAD /* infoForTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = infoForTable.swift; sourceTree = "<group>"; };
+		33C0E2DD1A6FDE9B00287EAD /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C0E2D61A6FDD1C00287EAD /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +68,7 @@
 		33C0E2A71A6FDBE100287EAD = {
 			isa = PBXGroup;
 			children = (
+				33C0E2D51A6FDD1C00287EAD /* MapKit.framework */,
 				33C0E2B21A6FDBE100287EAD /* MapProjectAgain */,
 				33C0E2C81A6FDBE100287EAD /* MapProjectAgainTests */,
 				33C0E2B11A6FDBE100287EAD /* Products */,
@@ -79,6 +89,9 @@
 			children = (
 				33C0E2B51A6FDBE100287EAD /* AppDelegate.swift */,
 				33C0E2B71A6FDBE100287EAD /* ViewController.swift */,
+				33C0E2D71A6FDD8400287EAD /* theCell.swift */,
+				33C0E2DB1A6FDDA900287EAD /* infoForTable.swift */,
+				33C0E2DD1A6FDE9B00287EAD /* DetailView.swift */,
 				33C0E2B91A6FDBE100287EAD /* Main.storyboard */,
 				33C0E2BC1A6FDBE100287EAD /* Images.xcassets */,
 				33C0E2BE1A6FDBE100287EAD /* LaunchScreen.xib */,
@@ -161,6 +174,11 @@
 				TargetAttributes = {
 					33C0E2AF1A6FDBE100287EAD = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					33C0E2C41A6FDBE100287EAD = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -212,8 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C0E2DC1A6FDDA900287EAD /* infoForTable.swift in Sources */,
 				33C0E2B81A6FDBE100287EAD /* ViewController.swift in Sources */,
 				33C0E2B61A6FDBE100287EAD /* AppDelegate.swift in Sources */,
+				33C0E2DE1A6FDE9B00287EAD /* DetailView.swift in Sources */,
+				33C0E2D81A6FDD8400287EAD /* theCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
