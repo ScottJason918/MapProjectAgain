@@ -22,8 +22,8 @@ class TableInfo
     // in order to not get the error that it hasn't been initialized, you should initialize it in the "init" function by accpeting a variable
     var busSub : String = "";
     
-    init() // accept CLLocationCoordinate2D variable here
-    {
+    init() // accept CLLocationCoordinate2D variable here init(CLLocationCoordinate2D variable) instead of init()
+    { 
         // and apply that variable to using self.busLoc = variable
         //that way you avoid having to make it optional
     }
