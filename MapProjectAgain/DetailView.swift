@@ -16,6 +16,7 @@ class DetailView: UIViewController {
     @IBOutlet weak var mapTitleLabel: UILabel!
     @IBOutlet weak var theMap: MKMapView!
     
+    ///Variables to receieve information from segues
     var business:TableInfo!
     var myArray : [TableInfo] = [];
     
@@ -24,6 +25,7 @@ class DetailView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Checking to see if there is more than 1 restaurant to show on the map.
         if myArray.count == 0{
             
             mapTitleLabel.text = business.busName;
@@ -34,7 +36,7 @@ class DetailView: UIViewController {
             theMap.region = region;
             
             
-            // Do any additional setup after loading the view.
+            ///If array has more than one set if information do this.
         }else{
             mapTitleLabel.text = "All Businesses";
             let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1);
@@ -46,6 +48,7 @@ class DetailView: UIViewController {
     }
 
     override func viewWillAppear(animated: Bool) {
+        ///Checking array to see if there is more than one restaurant.
         if myArray.count == 0{
             
             var pin : MKPointAnnotation = MKPointAnnotation();
@@ -54,6 +57,8 @@ class DetailView: UIViewController {
             pin.subtitle = business.busSub;
             
             theMap.addAnnotation(pin);
+            
+            //If there is more than one restaurant, do this
         }else{
             mapTitleLabel.text = "All Businesses";
             for var i = 0; i < myArray.count; ++i{

@@ -10,8 +10,7 @@ import UIKit
 
 class theCell: UITableViewCell {
     
-    ///Setting up outlets for incoming data
-    
+    ///Setting up outlets for incoming data to the label for cells
     
     @IBOutlet weak var cellLabel: UILabel!
     

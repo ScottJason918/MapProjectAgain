@@ -26,10 +26,11 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         ///Business Information
+        /// Loading information to the init in infoForTable
         var business1 : TableInfo = TableInfo(busLoc: CLLocationCoordinate2D(latitude: 33.666706, longitude: -112.12828));
         business1.busName = "New Bacon-ings";
         business1.busSub = "Bacon based foods";
-
+        
         var business2 : TableInfo = TableInfo(busLoc : CLLocationCoordinate2D(latitude: 33.62134, longitude: -112.118708));
         business2.busName = "Never Been Feta";
         business2.busSub = "Greek food";
@@ -99,7 +100,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         tableView.deselectRowAtIndexPath(indexPath, animated: true);
     }
     
+    //Setting up 2 separate Segues
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        //For segue from cells with individual restaurants
         if segue.identifier == "cellSegue" {
             var detailView : DetailView = segue.destinationViewController as DetailView;
             var indexPath : NSIndexPath? = myTable.indexPathForSelectedRow();
@@ -107,6 +111,8 @@ class ViewController: UIViewController, UITableViewDataSource {
             let currentSelection : TableInfo = myArray[indexPath!.row];
             detailView.business = currentSelection;
         }
+        
+        //For segue from button to show all restaurants.
         if segue.identifier == "buttonSegue"{
             var detailView : DetailView = segue.destinationViewController as DetailView;
             detailView.myArray = myArray;
