@@ -27,10 +27,13 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         ///Business Information
         
-        var business1 : TableInfo = TableInfo();
+        var business1 : TableInfo = TableInfo(); //to work with new init function TableInfo(CLLocationCoordinate2D(lat,long)) instead.
         business1.busName = "New Bacon-ings";
         business1.busLoc = CLLocationCoordinate2D(latitude: 33.666706, longitude: -112.12828);
         business1.busSub = "Bacon based foods";
+        
+        
+        
         
         var business2 : TableInfo = TableInfo();
         business2.busName = "Never Been Feta";
