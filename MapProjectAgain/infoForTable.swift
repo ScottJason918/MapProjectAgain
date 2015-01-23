@@ -15,11 +15,13 @@ import MapKit
 class TableInfo
 {
     var busName : String = "";
+
     var busLoc : CLLocationCoordinate2D;
     var busSub : String = "";
     
     init(busLoc : CLLocationCoordinate2D)
     {
         self.busLoc = busLoc;
+
     }
 }

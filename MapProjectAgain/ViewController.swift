@@ -26,11 +26,10 @@ class ViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         
         ///Business Information
-        
         var business1 : TableInfo = TableInfo(busLoc: CLLocationCoordinate2D(latitude: 33.666706, longitude: -112.12828));
         business1.busName = "New Bacon-ings";
         business1.busSub = "Bacon based foods";
-        
+
         var business2 : TableInfo = TableInfo(busLoc : CLLocationCoordinate2D(latitude: 33.62134, longitude: -112.118708));
         business2.busName = "Never Been Feta";
         business2.busSub = "Greek food";
