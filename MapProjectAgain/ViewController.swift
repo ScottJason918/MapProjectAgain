@@ -27,54 +27,44 @@ class ViewController: UIViewController, UITableViewDataSource {
         
         ///Business Information
         
-        var business1 : TableInfo = TableInfo();
+        var business1 : TableInfo = TableInfo(busLoc: CLLocationCoordinate2D(latitude: 33.666706, longitude: -112.12828));
         business1.busName = "New Bacon-ings";
-        business1.busLoc = CLLocationCoordinate2D(latitude: 33.666706, longitude: -112.12828);
         business1.busSub = "Bacon based foods";
         
-        var business2 : TableInfo = TableInfo();
+        var business2 : TableInfo = TableInfo(busLoc : CLLocationCoordinate2D(latitude: 33.62134, longitude: -112.118708));
         business2.busName = "Never Been Feta";
-        business2.busLoc = CLLocationCoordinate2D(latitude: 33.62134, longitude: -112.118708);
         business2.busSub = "Greek food";
         
-        var business3 : TableInfo = TableInfo();
+        var business3 : TableInfo = TableInfo(busLoc: CLLocationCoordinate2D(latitude: 33.666028, longitude: -112.120867));
         business3.busName = "Mission A Corn Plished";
-        business3.busLoc = CLLocationCoordinate2D(latitude: 33.666028, longitude: -112.120867);
         business3.busSub = "Vegetarian friendly menu";
         
-        var business4 : TableInfo = TableInfo();
+        var business4 : TableInfo = TableInfo(busLoc: CLLocationCoordinate2D(latitude: 33.666278, longitude: -112.118305));
         business4.busName = "Fig-eta Bout It";
-        business4.busLoc = CLLocationCoordinate2D(latitude: 33.666278, longitude: -112.118305);
         business4.busSub = "Fruity";
         
-        var business5 : TableInfo = TableInfo();
+        var business5 : TableInfo = TableInfo(busLoc: CLLocationCoordinate2D(latitude: 33.678099, longitude: -112.119923));
         business5.busName = "Chevre Which Way but Loose";
-        business5.busLoc = CLLocationCoordinate2D(latitude: 33.678099, longitude: -112.119923);
         business5.busSub = "We're funny";
         
-        var business6 : TableInfo = TableInfo();
+        var business6 : TableInfo = TableInfo(busLoc: CLLocationCoordinate2D(latitude: 33.659563, longitude: -112.115674));
         business6.busName = "Tunami";
-        business6.busLoc = CLLocationCoordinate2D(latitude: 33.659563, longitude: -112.115674);
         business6.busSub = "Seafood";
         
-        var business7 : TableInfo = TableInfo();
+        var business7 : TableInfo = TableInfo(busLoc: CLLocationCoordinate2D(latitude: 33.674850, longitude: -112.107778));
         business7.busName = "These Collards Don't Run";
-        business7.busLoc = CLLocationCoordinate2D(latitude: 33.674850, longitude: -112.107778);
         business7.busSub = "Greens are good";
         
-        var business8 : TableInfo = TableInfo();
+        var business8 : TableInfo = TableInfo(busLoc: CLLocationCoordinate2D(latitude: 33.648631, longitude: -112.144428));
         business8.busName = "Totally Rad-ish";
-        business8.busLoc = CLLocationCoordinate2D(latitude: 33.648631, longitude: -112.144428);
         business8.busSub = "Gotta love veggies";
         
-        var business9 : TableInfo = TableInfo();
+        var business9 : TableInfo = TableInfo(busLoc: CLLocationCoordinate2D(latitude: 33.646537, longitude: -112.127262));
         business9.busName = "Last of the Mojicama";
-        business9.busLoc = CLLocationCoordinate2D(latitude: 33.646537, longitude: -112.127262);
         business9.busSub = "Respectfully good";
         
-        var business10 : TableInfo = TableInfo();
+        var business10 : TableInfo = TableInfo(busLoc: CLLocationCoordinate2D(latitude: 33.665899, longitude: -112.115586));
         business10.busName = "Hit Me With Your Best Shallot";
-        business10.busLoc = CLLocationCoordinate2D(latitude: 33.665899, longitude: -112.115586);
         business10.busSub = "Rockin out while eating";
         
         //Adding to Array

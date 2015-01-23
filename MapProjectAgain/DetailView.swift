@@ -36,7 +36,12 @@ class DetailView: UIViewController {
             
             // Do any additional setup after loading the view.
         }else{
-        
+            mapTitleLabel.text = "All Businesses";
+            let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1);
+            let region = MKCoordinateRegionMake(myArray[0].busLoc, span);
+            
+            locationManager.requestWhenInUseAuthorization();
+            theMap.region = region;
         }
     }
 
@@ -50,13 +55,14 @@ class DetailView: UIViewController {
             
             theMap.addAnnotation(pin);
         }else{
-            mapTitleLabel.text = "All Bussinesses";
+            mapTitleLabel.text = "All Businesses";
             for var i = 0; i < myArray.count; ++i{
+                theMap.showAnnotations(theMap.annotations, animated:true)
                 var pin : MKPointAnnotation = MKPointAnnotation();
 
-                pin.coordinate = business.busLoc;
-                pin.title = business.busName;
-                pin.subtitle = business.busSub;
+                pin.coordinate = myArray[i].busLoc;
+                pin.title = myArray[i].busName;
+                pin.subtitle = myArray[i].busSub;
                 theMap.addAnnotation(pin);
             }
         }
